@@ -39,11 +39,10 @@ section.only-title {
 }
 
 section.only-title h1 {
-  font-size: 64px;
+  font-size: 72px;
   color: #26c6da;
   max-width: 40%; /* 例: 40%まで使えるように */
   word-break: break-word;
-  white-space: normal;
   margin: 0;
   flex: 0 1 40%;  /* 追加: 40%まで広がる */
   background: linear-gradient(90deg, #26c6da, #f48fb1);
@@ -52,31 +51,47 @@ section.only-title h1 {
   background-clip: text; /* 一部ブラウザ用 */
 }
 
+section.only-title > ul,
+section.only-title > p,
+section.only-title > ol {
+  color: #072327;
+  font-size: 36px;
+}
+
 section.only-title img {
   height: auto;
   margin-left: auto;   /* これを追加 */
   flex-shrink: 0;
 }
 
-
 section.slides h1{
   color: #26c6da;
-  font-size: 60px;
+  font-size: 52px;
   position: absolute;
   left: 72px; top: 72px;
+}
+
+section.slides img {
+  display: block;
+  margin: 40px auto 48px auto;
+  box-sizing: border-box;
+  max-width: 90%;
+  max-height: 60vh;
+  width: auto;
+  height: auto;
 }
 
 section.slides > ul,
 section.slides > p,
 section.slides > ol {
-  max-width: fit-content;
   color: #072327;
   font-size: 36px;
   position: absolute;
   left: 72px;
-  top: 180px; /* h1の高さ＋余白 */
   right: 72px;
-  /* 下端から80px上まで表示、高さ制限 */
-  max-height: calc(100% - 180px - 80px);
-  overflow: hidden;
+  top: 180px;
+  bottom: 120px;
+  overflow-y: auto;
 }
+
+
