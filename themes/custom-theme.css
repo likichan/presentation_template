@@ -1,4 +1,3 @@
-
 @import 'default';
 
 section{
@@ -7,7 +6,7 @@ section{
   font-size: 24px;
   box-sizing: border-box;
   border: 12px double #26c6da;
-  border-radius: 6px;;
+  border-radius: 6px;
   margin: 0px;           /* ← ここを0に */
   padding: 24px;       /* ← 内側に余白を作る */
 }
@@ -24,28 +23,37 @@ section.title {
   font-size: 36px;
 }
 
-section.only-title h1{
-  background: linear-gradient(90deg, #26c6da, #F48FB1 90%);
+section.only-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 400px; /* 必要に応じて調整 */
+  padding: 0 48px;
+  box-sizing: border-box;
+}
+
+section.only-title h1 {
+  font-size: 64px;
+  color: #26c6da;
+  max-width: 40%; /* 例: 40%まで使えるように */
+  word-break: break-word;
+  white-space: normal;
+  margin: 0;
+  flex: 0 1 40%;  /* 追加: 40%まで広がる */
+  background: linear-gradient(90deg, #26c6da, #f48fb1);
   -webkit-background-clip: text;
-  color: transparent;
-  font-size: 80px;
-  text-align: center;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* 一部ブラウザ用 */
 }
-section.only-title h1::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, #26c6da, #F48FB1 90%);/* グラデや他の色にも変更可 */
-  border-radius: 2px;
-  opacity: 0.9;
+
+section.only-title img {
+  height: auto;
+  margin-left: auto;   /* これを追加 */
+  flex-shrink: 0;
 }
+
 
 section.slides h1{
   color: #26c6da;
