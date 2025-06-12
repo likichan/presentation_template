@@ -17,6 +17,7 @@
   - marp "presentations/2025-05-30 前期中間取組発表.md" --pdf --theme ./themes/custom-theme.css
 5. プレビューを確認したい時は4を実行した上で下のコマンドを実行
   - ./makepdf.sh "presentations/ファイル名.md"
+  - marp ファイル.md --server --allow-local-files
 
 # スライドのデザインについて
 - スライドの見た目を自分好みにカスタマイズしたいという人は`themes/custom.css`をいじってみてください！下に参考文献置いておきます！
